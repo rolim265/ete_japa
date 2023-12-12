@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Desenvolvimento de Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .request-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .submit-button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #2980b9;
+        }
+
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            /* Preenche o espaço restante vertical */
+        }
+
+        footer {
+            background-color: #acf1f1;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer img {
+            max-width: 29px;
+            /* Ajuste a largura máxima da logo conforme necessário */
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>Solicitar Desenvolvimento de Site</h1>
+            <p>Informe suas preferências e solicite o desenvolvimento do seu site personalizado!</p>
+        </header>
+
+        <div class="request-container">
+            <h2>Formulário de Solicitação</h2>
+            <form action="https://wa.me/11930857242" method="GET">
+                <label for="tipoDesenvolvimento">Tipo de Desenvolvimento:</label>
+                <select id="tipoDesenvolvimento" name="tipoDesenvolvimento" required>
+                    <option value="front-end">Front-end</option>
+                    <option value="back-end">Back-end</option>
+                    <option value="geral">Geral</option>
+                </select>
+
+                <label for="detalhes">Detalhes da Solicitação:</label>
+                <textarea id="detalhes" name="detalhes" rows="4" required></textarea>
+
+                <input type="submit" class="submit-button" value="Enviar Solicitação">
+            </form>
+            <button class="submit-button" target="_blank" onclick="goBack()">Voltar</button>
+
+            <script>
+                function goBack() {
+                    // Função para voltar uma página no histórico do navegador
+                    window.history.back();
+                }
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <img src="img/14.jpg" alt="Logo Ete Japas">
+        &copy; 2023 Ete Japas. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

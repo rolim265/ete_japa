@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Incríveis</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('img/festa.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Cor preta com 70% de opacidade */
+            padding: 20px;
+            /* Espaçamento interno para o conteúdo */
+            border-radius: 10px;
+            /* Cantos arredondados */
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1,
+        p {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            /* Centraliza o botão */
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Eventos Incríveis</h1>
+        
+        <p>Explore nossos eventos especiais em chácaras com DJs incríveis, piscinas refrescantes e comida deliciosa. Não
+            perca a diversão!</p>
+        <div class="gallery">
+            <img src="img/festa1.jpg" alt="Evento 1">
+            <img src="img/festa2.jpg" alt="Evento 2">
+            <img src="img/festa3.jpg" alt="Evento 3">
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        <a class="button"
+            href="https://wa.me/11930857242?text=Olá%2C%20gostaria%20de%20comprar%20um%20ingresso%20para%20o%20evento.%20Como%20posso%20prosseguir%3F"
+            target="_blank">Comprar Ingresso</a>
+            <button class="button" target="_blank" onclick="goBack()">Voltar</button>
+
+            <script>
+                function goBack() {
+                    // Função para voltar uma página no histórico do navegador
+                    window.history.back();
+                }
+            </script>
+    </div>
+</body>
+
+</html>
