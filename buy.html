@@ -85,7 +85,7 @@
             color: #000000;
             text-align: center;
             padding: 20px;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -106,10 +106,9 @@
             <h1>Solicitar Desenvolvimento de Site</h1>
             <p>Informe suas preferências e solicite o desenvolvimento do seu site personalizado!</p>
         </header>
-
         <div class="request-container">
             <h2>Formulário de Solicitação</h2>
-            <form action="https://wa.me/11930857242" method="GET">
+            <form id="whatsappForm" method="GET">
                 <label for="tipoDesenvolvimento">Tipo de Desenvolvimento:</label>
                 <select id="tipoDesenvolvimento" name="tipoDesenvolvimento" required>
                     <option value="front-end">Front-end</option>
@@ -120,7 +119,7 @@
                 <label for="detalhes">Detalhes da Solicitação:</label>
                 <textarea id="detalhes" name="detalhes" rows="4" required></textarea>
 
-                <input type="submit" class="submit-button" value="Enviar Solicitação">
+                <input type="button" class="submit-button" value="Enviar Solicitação" onclick="prepareWhatsAppLink()">
             </form>
             <button class="submit-button" target="_blank" onclick="goBack()">Voltar</button>
 
@@ -129,8 +128,22 @@
                     // Função para voltar uma página no histórico do navegador
                     window.history.back();
                 }
+
+                function prepareWhatsAppLink() {
+                    var tipoDesenvolvimento = document.getElementById('tipoDesenvolvimento').value;
+                    var detalhes = document.getElementById('detalhes').value;
+
+                    // Montar a mensagem com os dados do formulário
+                    var mensagem = "Tipo de Desenvolvimento: " + tipoDesenvolvimento + "%0A";
+                    mensagem += "Detalhes da Solicitação: " + detalhes;
+
+                    // Atualizar o link do WhatsApp com a mensagem pré-preenchida
+                    var linkWhatsApp = "https://wa.me/5511930857242?text=" + encodeURIComponent(mensagem);
+                    window.location.href = linkWhatsApp;
+                }
             </script>
         </div>
+
     </main>
 
     <footer>
